@@ -26,6 +26,7 @@ def run_ssh():
 	    print "Successful"
     except subprocess.CalledProcessError as e:
         print "Failed. Please check your config file."
+        sys.exit(2)
 
 #Main Command
 

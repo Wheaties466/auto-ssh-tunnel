@@ -1,0 +1,18 @@
+[Unit]
+Description=Start a reverse tunnel for MGMT
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/python2 /usr/local/bin/connect.py
+WorkingDirectory=/home/pi/
+TimeoutSec=10
+StandardOutput=inherit
+StandardError=inherit
+Restart=on-failure
+User=root
+ExecStop=/usr/local/bin/reverse-tunnel-stop.sh
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
