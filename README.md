@@ -125,6 +125,11 @@ yes: write error
 
 [*] We are now finished with the installation! Restart the client to complete the installation. To run autossh, input connect.py on the terminal.
 ```  
+
+Also there is a systemd service file to start the connection on boot.
+`sudo cp reverse-tunnel.service /etc/systemd/system/`
+`sudo systemctl enable reverse-tunnel.service`
+
 -------------------------
 
 
