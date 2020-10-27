@@ -132,6 +132,8 @@ Also there is a systemd service file to start the connection on boot.
 
 `sudo systemctl enable reverse-tunnel.service`
 
+`sudo systemctl daemon-reload`
+
 -------------------------
 
 
