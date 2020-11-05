@@ -9,10 +9,11 @@ WorkingDirectory=/home/pi/
 TimeoutSec=10
 StandardOutput=inherit
 StandardError=inherit
-Restart=on-failure
+Restart=always
 User=root
 ExecStop=/usr/local/bin/reverse-tunnel-stop.sh
 RestartSec=10
+RuntimeMaxSec=43200
 
 [Install]
 WantedBy=multi-user.target
